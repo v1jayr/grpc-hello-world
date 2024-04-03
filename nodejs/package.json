@@ -1,0 +1,23 @@
+{
+  "name": "todo-app-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/v1jayr/todo-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/v1jayr/todo-app/issues"
+  },
+  "homepage": "https://github.com/v1jayr/todo-app#readme",
+  "dependencies": {
+    "protoc-gen-js": "^3.21.2",
+    "ts-protoc-gen": "^0.15.0"
+  }
+}

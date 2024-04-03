@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/v1jayr/grpc-hello-world";
+option go_package = "github.com/v1jayr/grpc-hello-world/lib/protogen";
 
 package todoapp.grpc.models;
 

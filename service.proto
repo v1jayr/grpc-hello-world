@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/v1jayr/grpc-hello-world";
+
+package todoapp.grpc.models;
+
+service HelloWorld {
+  rpc Greet(GreetRequest) returns (GreetResponse) {}
+}
+
+message GreetRequest {
+  string name = 1;
+}
+
+message GreetResponse {
+  string message = 1;
+}

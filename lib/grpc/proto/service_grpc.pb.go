@@ -4,7 +4,7 @@
 // - protoc             v4.24.4
 // source: service.proto
 
-package protogen
+package proto
 
 import (
 	context "context"

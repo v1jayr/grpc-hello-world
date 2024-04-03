@@ -6,7 +6,9 @@ NODEJS_OUT_DIR="./nodejs/lib/grpc/proto"
 GO_OUT_DIR="lib/grpc/proto"
 
 gen-go:
-	protoc --go_out="${GO_OUT_DIR}" --go_opt=paths=source_relative --go-grpc_out="${GO_OUT_DIR}" --go-grpc_opt=paths=source_relative service.proto
+	protoc -I . --go_out="${GO_OUT_DIR}" --go_opt=paths=source_relative --go-grpc_out="${GO_OUT_DIR}" --go-grpc_opt=paths=source_relative service.proto
+
+	protoc -I . --grpc-gateway_out="${GO_OUT_DIR}" --grpc-gateway_opt=paths=source_relative --grpc-gateway_opt generate_unbound_methods=true service.proto
 
 gen-ts:
 	protoc --plugin="protoc-gen-ts=${PROTOC_GEN_TS_PATH}" \

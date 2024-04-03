@@ -1,9 +1,9 @@
 
 PROTOC_GEN_TS_PATH="./nodejs/node_modules/.bin/protoc-gen-ts"
 
-NODEJS_OUT_DIR="./nodejs/lib/protogen"
+NODEJS_OUT_DIR="./nodejs/lib/grpc/proto"
 
-GO_OUT_DIR="lib/protogen"
+GO_OUT_DIR="lib/grpc/proto"
 
 gen-go:
 	protoc --go_out="${GO_OUT_DIR}" --go_opt=paths=source_relative --go-grpc_out="${GO_OUT_DIR}" --go-grpc_opt=paths=source_relative service.proto

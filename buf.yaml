@@ -1,4 +1,16 @@
 version: v1
+
 name: buf.build/v1jayr/grpc-hello-world
+
+breaking:
+  use:
+    - FILE
+
+lint:
+  use:
+    - DEFAULT
+    - COMMENTS
+    - PACKAGE_NO_IMPORT_CYCLE
+
 deps:
   - buf.build/googleapis/googleapis

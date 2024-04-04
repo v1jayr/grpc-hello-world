@@ -1,0 +1,1 @@
+export * from './grpc/proto/service_pb'

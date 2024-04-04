@@ -2,10 +2,17 @@ syntax = "proto3";
 
 option go_package = "github.com/v1jayr/grpc-hello-world/lib/grpc/proto";
 
+import "google/api/annotations.proto";
+
 package todoapp.grpc.models;
 
 service HelloWorld {
-  rpc Greet(GreetRequest) returns (GreetResponse) {}
+  rpc Greet(GreetRequest) returns (GreetResponse) {
+    option (google.api.http) = {
+      post: "/greet"
+      body: "*"
+    };
+  }
 }
 
 message GreetRequest {

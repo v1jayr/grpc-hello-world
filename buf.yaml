@@ -1,0 +1,4 @@
+version: v1
+name: buf.build/v1jayr/grpc-hello-world
+deps:
+  - buf.build/googleapis/googleapis

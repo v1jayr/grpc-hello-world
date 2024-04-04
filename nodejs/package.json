@@ -1,5 +1,5 @@
 {
-  "name": "todo-app-js",
+  "name": "@v1jayr/grpc-hello-world-ts",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/v1jayr/todo-app.git"
+    "url": "git+https://github.com/v1jayr/grpc-hello-world.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/v1jayr/todo-app/issues"
+    "url": "https://github.com/v1jayr/grpc-hello-world/issues"
   },
-  "homepage": "https://github.com/v1jayr/todo-app#readme",
+  "homepage": "https://github.com/v1jayr/grpc-hello-world#readme",
   "dependencies": {
     "@bufbuild/buf": "^1.30.1",
     "@bufbuild/protobuf": "^1.8.0",
@@ -27,5 +27,8 @@
     "@typescript-eslint/parser": "^7.5.0",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }

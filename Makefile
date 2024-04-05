@@ -1,7 +1,7 @@
 
 PROTOC_GEN_TS_PATH="./nodejs/node_modules/.bin/protoc-gen-ts"
 
-NODEJS_OUT_DIR="./nodejs/lib/grpc/proto"
+NODEJS_OUT_DIR="./nodejs/src/grpc/proto"
 
 GO_OUT_DIR="lib/grpc/proto"
 

@@ -4,6 +4,7 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"io"
 	"log"
 	"net"
 	"net/http"
@@ -55,8 +56,16 @@ func startHttpReverseProxy(grpcPort, httpPort uint) error {
 	defer cancel()
 
 	option := runtime.WithErrorHandler(func(ctx context.Context, sm *runtime.ServeMux, m runtime.Marshaler, w http.ResponseWriter, r *http.Request, err error) {
+
+		b, errx := io.ReadAll(r.Body)
+		if errx != nil {
+			fmt.Printf("failed to read req, %v\n", errx)
+		}
+		fmt.Printf("[Method=%s] [URL=%s] Request=%s\n", r.Method, r.RequestURI, string(b))
+
+		fmt.Printf("%v\n", err)
 		w.WriteHeader(500)
-		w.Write([]byte(fmt.Sprintf("Internal error")))
+		w.Write([]byte("Internal error"))
 	})
 
 	mux := runtime.NewServeMux(option)

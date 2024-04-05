@@ -1,3 +1,4 @@
 nodejs/_*
 nodejs/_*/
 nodejs/node_modules
+nodejs/dist

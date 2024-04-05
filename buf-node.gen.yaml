@@ -1,5 +1,8 @@
 version: v1
 plugins:
-  - plugin: buf.build/grpc/web
-    out: nodejs/lib/grpc/proto
-    opt: import_style=typescript,mode=grpcweb
+  - plugin: es
+    opt: target=ts
+    out: nodejs/src/grpc
+  - plugin: connect-es
+    opt: target=ts
+    out: nodejs/src/grpc

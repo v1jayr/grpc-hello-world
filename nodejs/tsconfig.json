@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    
+    /* Modules */
+    "module": "commonjs",
+    "declaration": true, // generate d.ts files
+    "outDir": "dist",
+    "declarationDir": "dist/types",
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "lib/**/*"
+  ] // include all files in the lib directory
+}

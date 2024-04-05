@@ -1,4 +1,6 @@
-#grpc-hello-world
+# grpc-hello-world
+
+Example grpc service with http bindings. Server and Http gateway implementation is golang and client is typescript.
 
 ## Generate stubs
 `make proto-gen`
